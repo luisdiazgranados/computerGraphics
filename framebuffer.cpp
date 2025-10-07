@@ -1,64 +1,133 @@
+#include <GL/glew.h>
 #include "framebuffer.h"
+#include "math.h"
+#include "scene.h"
 
-// Use your local GL headers; include Windows/FL first if needed elsewhere
-#include "GL.h"
-#include "GLU.h"
+#include <tiffio.h>
 
-#include <algorithm>
-#include <cstring>
+using namespace std;
 
-#ifndef GL_BGRA
-#define GL_BGRA 0x80E1
-#endif
+#include <iostream>
+#include <fstream>
+#include <strstream>
 
-static inline uint32_t packRGBA(const V3& c) {
-    auto clamp01 = [](float x) { return x < 0.f ? 0.f : (x > 1.f ? 1.f : x); };
-    uint8_t r = static_cast<uint8_t>(255.f * clamp01(c[0]) + 0.5f);
-    uint8_t g = static_cast<uint8_t>(255.f * clamp01(c[1]) + 0.5f);
-    uint8_t b = static_cast<uint8_t>(255.f * clamp01(c[2]) + 0.5f);
-    return (0xFFu << 24) | (r << 16) | (g << 8) | b; // A R G B
+
+FrameBuffer::FrameBuffer(int u0, int v0, int _w, int _h) : 
+	Fl_Gl_Window(u0, v0, _w, _h, 0) {
+
+	w = _w;
+	h = _h;
+	pix = new unsigned int[w*h];
 }
 
-void Framebuffer::Clear(uint32_t rgba, float z) {
-    std::fill(color.begin(), color.end(), rgba);
-    std::fill(zbuf.begin(), zbuf.end(), z);
+void FrameBuffer::draw() {
+
+	glDrawPixels(w, h, GL_RGBA, GL_UNSIGNED_BYTE, pix);
+
 }
 
-void Framebuffer::Set(int u, int v, uint32_t rgba) {
-    if (u < 0 || v < 0 || u >= w || v >= h) return;
-    color[static_cast<size_t>(v) * w + u] = rgba;
+int FrameBuffer::handle(int event) {
+
+	switch (event)
+	{
+	case FL_KEYBOARD: {
+		KeyboardHandle();
+		return 0;
+	}
+	case FL_MOVE: {
+		int u = Fl::event_x();
+		int v = Fl::event_y();
+		if (u < 0 || u > w - 1 || v < 0 || v > h - 1)
+			return 0;
+		cerr << u << " " << v << "         \r";
+		return 0;
+	}
+	default:
+		return 0;
+	}
+	return 0;
 }
 
-void Framebuffer::Set(int u, int v, const V3& rgb) {
-    Set(u, v, packRGBA(rgb));
+void FrameBuffer::KeyboardHandle() {
+
+	int key = Fl::event_key();
+	switch (key) {
+	case FL_Left: {
+		cerr << "INFO: pressed left arrow key";
+		break;
+	}
+	default:
+		cerr << "INFO: do not understand keypress" << endl;
+		return;
+	}
+
 }
 
-void Framebuffer::SetZ(int u, int v, float z) {
-    if (u < 0 || v < 0 || u >= w || v >= h) return;
-    zbuf[static_cast<size_t>(v) * w + u] = z;
+// load a tiff image to pixel buffer
+void FrameBuffer::LoadTiff(char* fname) {
+	TIFF* in = TIFFOpen(fname, "r");
+	if (in == NULL) {
+		cerr << fname << " could not be opened" << endl;
+		return;
+	}
+
+	int width, height;
+	TIFFGetField(in, TIFFTAG_IMAGEWIDTH, &width);
+	TIFFGetField(in, TIFFTAG_IMAGELENGTH, &height);
+	if (w != width || h != height) {
+		w = width;
+		h = height;
+		delete[] pix;
+		pix = new unsigned int[w*h];
+		size(w, h);
+		glFlush();
+		glFlush();
+	}
+
+	if (TIFFReadRGBAImage(in, w, h, pix, 0) == 0) {
+		cerr << "failed to load " << fname << endl;
+	}
+
+	TIFFClose(in);
 }
 
-float Framebuffer::GetZ(int u, int v) const {
-    if (u < 0 || v < 0 || u >= w || v >= h) return 1e30f;
-    return zbuf[static_cast<size_t>(v) * w + u];
+// save as tiff image
+void FrameBuffer::SaveAsTiff(char *fname) {
+
+	TIFF* out = TIFFOpen(fname, "w");
+
+	if (out == NULL) {
+		cerr << fname << " could not be opened" << endl;
+		return;
+	}
+
+	TIFFSetField(out, TIFFTAG_IMAGEWIDTH, w);
+	TIFFSetField(out, TIFFTAG_IMAGELENGTH, h);
+	TIFFSetField(out, TIFFTAG_SAMPLESPERPIXEL, 4);
+	TIFFSetField(out, TIFFTAG_BITSPERSAMPLE, 8);
+	TIFFSetField(out, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);
+	TIFFSetField(out, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);
+	TIFFSetField(out, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_RGB);
+
+	for (uint32 row = 0; row < (unsigned int)h; row++) {
+		TIFFWriteScanline(out, &pix[(h - row - 1) * w], row);
+	}
+
+	TIFFClose(out);
 }
 
-bool Framebuffer::IsFarther(int u, int v, float z) const {
-    return z > GetZ(u, v);
+
+
+void FrameBuffer::Set(unsigned int color) {
+
+	for (int uv = 0; uv < w*h; uv++)
+		pix[uv] = color;
+
 }
 
-void Framebuffer::GLDrawPixels() const {
-    // Draw the CPU buffer to the current OpenGL context
-    glPixelZoom(1.f, -1.f);          // flip Y so (0,0) is top-left in window space
-    glRasterPos2i(-1, 1);            // start at upper-left of NDC
-    glDrawPixels(w, h, GL_BGRA, GL_UNSIGNED_BYTE, color.data());
+
+void FrameBuffer::Set(unsigned int u, unsigned int v, unsigned int color) {
+
+	pix[(h - 1 - v)*w + u] = color;
+
 }
-
-void Framebuffer::draw() {
-    GLDrawPixels();
-}
-
-// Simple stubs so the linker stops complaining; replace with real I/O later.
-void Framebuffer::SaveAsTiff(const char* /*path*/) const {}
-
-bool Framebuffer::LoadTiff(const char* /*path*/) {return false}

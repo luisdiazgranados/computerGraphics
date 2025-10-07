@@ -9,7 +9,6 @@ void GUI::cb_DBG(Fl_Button* o, void* v) {
   ((GUI*)(o->parent()->user_data()))->cb_DBG_i(o,v);
 }
 #include "scene.h"
-extern Scene gScene;
 
 GUI::GUI() {
   { uiw = new Fl_Double_Window(199, 197, "GUI");

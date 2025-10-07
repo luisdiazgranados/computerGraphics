@@ -1,39 +1,20 @@
 #pragma once
-#include <cstdint>
-#include <vector>
 
-// Make sure FLTK GL window is known
+#include <FL/Fl.H>
 #include <FL/Fl_Gl_Window.H>
+#include <GL/glut.h>
 
-#include "v3.h"
-
-class Framebuffer : public Fl_Gl_Window {
+class FrameBuffer : public Fl_Gl_Window {
 public:
-    int w = 0, h = 0;
-    std::vector<uint32_t> color; // 0xAARRGGBB
-    std::vector<float>    zbuf;
+	unsigned int *pix;
+	int w, h;
+	FrameBuffer(int u0, int v0, int _w, int _h);
+	void draw();
+	int handle(int guievent);
+	void LoadTiff(char* fname);
+	void SaveAsTiff(char* fname);
+	void KeyboardHandle();
 
-    Framebuffer(int W, int H)
-        : Fl_Gl_Window(W, H), w(W), h(H),
-        color(static_cast<size_t>(W)* H, 0xFF000000u),
-        zbuf(static_cast<size_t>(W)* H, 1e30f) {
-    }
-
-    // FLTK draw hook
-    void draw() override;
-
-    // framebuffer ops
-    void Clear(uint32_t rgba, float z);
-    void Set(int u, int v, uint32_t rgba);
-    void Set(int u, int v, const V3& rgb); // rgb in [0,1]
-    void SetZ(int u, int v, float z);
-    float GetZ(int u, int v) const;
-    bool IsFarther(int u, int v, float z) const;
-
-    // I/O (safe stubs so you can compile)
-    void SaveAsTiff(const char* path) const;
-    bool LoadTiff(const char* path);
-
-    // GL blit
-    void GLDrawPixels() const;
+	void Set(unsigned int color);
+	void Set(unsigned int u, unsigned int v, unsigned int color);
 };

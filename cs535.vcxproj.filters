@@ -6,8 +6,7 @@
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="M33.cpp" />
     <ClCompile Include="V3.cpp" />
-    <ClCompile Include="ppc.cpp" />
-    <ClCompile Include="raster.cpp" />
+    <ClCompile Include="draw.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framebuffer.h" />
@@ -15,9 +14,6 @@
     <ClInclude Include="scene.h" />
     <ClInclude Include="M33.h" />
     <ClInclude Include="v3.h" />
-    <ClInclude Include="ppc.h" />
-    <ClInclude Include="raster.h" />
-    <ClInclude Include="shading.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CG">
@@ -28,8 +24,5 @@
     <None Include="CG\shaderOne.cg">
       <Filter>CG</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="README.txt" />
   </ItemGroup>
 </Project>

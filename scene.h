@@ -1,29 +1,25 @@
 #pragma once
-#include "v3.h"
-
-class FrameBuffer;
-class PPC;
+#include "gui.h"
+#include "framebuffer.h"
 
 class Scene {
 public:
-    Scene();
-    ~Scene();
 
-    void Render();
-    void DBG();        // debug UI hook
-    void NewButton();  // another UI hook
-
-private:
-    FrameBuffer* fb = nullptr;
-    FrameBuffer* shadowFB = nullptr;
-    PPC* cam = nullptr;
-    PPC* lightCam = nullptr;
-
-    V3  lightPos = V3(100, 100, 100);
-    bool showShadowMap = false;
-    float shadowBias = 1e-3f;
-
-    V3 ShadeWithShadow(const V3& Pw, const V3& Nw, const V3& baseColor);
-    void ShadowPass();   // fills shadowFB z only
-    void CameraPass();   // draws to fb using shadow test
+	GUI *gui;
+	FrameBuffer *fb;
+	Scene();
+	void DBG();
+	void NewButton();
+	void drawLine(int x0, int y0, int x1, int y1, unsigned int color);
+	void drawCircle(int cx, int cy, int r, unsigned int color);
+	void drawRectangle(int x0, int y0, int x1, int y1, unsigned int color);
+	void drawTriangle(int x0, int y0, int x1, int y1, int x2, int y2, unsigned int color);
+	void drawL(int x, int y, int w, int h, int t, unsigned int color);
+	void drawU(int x, int y, int w, int h, int t, unsigned int color);
+	void drawI(int x, int y, int w, int h, int t, unsigned int color);
+	int mapX(float deg, int L, int W, float degstart = 0.0f, float degend = 360.0f);
+	int mapY(float v, float vmin, float vmax, int T, int B, int H);
+	void plotHW2(FrameBuffer* fb);
 };
+
+extern Scene *scene;
