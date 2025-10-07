@@ -1,0 +1,291 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\framebuffer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:framebuffer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\ppc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:ppc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\framebuffer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:framebuffer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\gui.cxx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:gui.cxx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\M33.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:M33.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\M33.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:M33.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\v3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:v3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\INCLUDE\\10.0.26100.0\\UM\\GL\\GL.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\V3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:V3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\README.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:README.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\raster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:raster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\raster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:raster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\ppc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:ppc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\gui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25615035-3AF2-42FC-967B-63AD88A4EECE}|cs535.vcxproj|solutionrelative:gui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GL.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\gl\\GL.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\gl\\GL.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\gl\\GL.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\gl\\GL.h",
+              "ViewState": "AgIAADUBAAAAAAAAAAAAAIYEAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-07T15:02:39.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "v3.h",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\v3.h",
+              "RelativeDocumentMoniker": "v3.h",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\v3.h",
+              "RelativeToolTip": "v3.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-07T14:22:49.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "M33.h",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\M33.h",
+              "RelativeDocumentMoniker": "M33.h",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\M33.h",
+              "RelativeToolTip": "M33.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-09T16:20:18.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "M33.cpp",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\M33.cpp",
+              "RelativeDocumentMoniker": "M33.cpp",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\M33.cpp",
+              "RelativeToolTip": "M33.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-09T21:08:32.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "framebuffer.h",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\framebuffer.h",
+              "RelativeDocumentMoniker": "framebuffer.h",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\framebuffer.h*",
+              "RelativeToolTip": "framebuffer.h*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-07T00:54:10.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "framebuffer.cpp",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\framebuffer.cpp",
+              "RelativeDocumentMoniker": "framebuffer.cpp",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\framebuffer.cpp*",
+              "RelativeToolTip": "framebuffer.cpp*",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-07T14:26:11.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ppc.h",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\ppc.h",
+              "RelativeDocumentMoniker": "ppc.h",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\ppc.h*",
+              "RelativeToolTip": "ppc.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-07T13:35:53.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "gui.cxx",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\gui.cxx",
+              "RelativeDocumentMoniker": "gui.cxx",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\gui.cxx",
+              "RelativeToolTip": "gui.cxx",
+              "ViewState": "AgIAAAgAAAAAAAAAAAApwBkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-09T16:19:21.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "scene.cpp",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\scene.cpp",
+              "RelativeDocumentMoniker": "scene.cpp",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\scene.cpp*",
+              "RelativeToolTip": "scene.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-07T13:21:56.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "V3.cpp",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\V3.cpp",
+              "RelativeDocumentMoniker": "V3.cpp",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\V3.cpp",
+              "RelativeToolTip": "V3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-07T13:24:02.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "scene.h",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\scene.h",
+              "RelativeDocumentMoniker": "scene.h",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\scene.h",
+              "RelativeToolTip": "scene.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-07T13:19:43.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "README.txt",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\README.txt",
+              "RelativeDocumentMoniker": "README.txt",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\README.txt",
+              "RelativeToolTip": "README.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-07T14:47:12.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "raster.h",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\raster.h",
+              "RelativeDocumentMoniker": "raster.h",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\raster.h",
+              "RelativeToolTip": "raster.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-07T13:24:17.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "raster.cpp",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\raster.cpp",
+              "RelativeDocumentMoniker": "raster.cpp",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\raster.cpp",
+              "RelativeToolTip": "raster.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-07T13:23:55.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ppc.cpp",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\ppc.cpp",
+              "RelativeDocumentMoniker": "ppc.cpp",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\ppc.cpp",
+              "RelativeToolTip": "ppc.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-07T14:24:36.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "gui.h",
+              "DocumentMoniker": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\gui.h",
+              "RelativeDocumentMoniker": "gui.h",
+              "ToolTip": "C:\\Users\\piped\\Desktop\\08_27_Graphics_Pipeline\\gui.h",
+              "RelativeToolTip": "gui.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-09T16:19:20.894Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
