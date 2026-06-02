@@ -1,0 +1,58 @@
+// Projective texture mapping shader - Cg version
+// Equivalent to shaders/projTex.vert + projTex.frag
+
+struct VertexInput {
+    float4 position : POSITION;
+    float4 color    : COLOR;
+    float3 normal   : NORMAL;
+};
+
+struct VertexOutput {
+    float4 hPosition    : POSITION;
+    float4 color        : COLOR;
+    float3 normal       : TEXCOORD0;
+    float3 worldPos     : TEXCOORD1;
+    float4 projTexCoord : TEXCOORD2;
+};
+
+VertexOutput VertexMain(VertexInput IN,
+    uniform float4x4 modelViewProj,
+    uniform float4x4 projectorMVP)
+{
+    VertexOutput OUT;
+    OUT.hPosition = mul(modelViewProj, IN.position);
+    OUT.color = IN.color;
+    OUT.normal = IN.normal;
+    OUT.worldPos = IN.position.xyz;
+    OUT.projTexCoord = mul(projectorMVP, IN.position);
+    return OUT;
+}
+
+float4 FragmentMain(VertexOutput IN,
+    uniform sampler2D projTexture : TEXUNIT0,
+    uniform float3 projectorPos,
+    uniform float ka) : COLOR
+{
+    float3 N = normalize(IN.normal);
+
+    // projective texture lookup
+    float3 tc = IN.projTexCoord.xyz / IN.projTexCoord.w;
+    tc = tc * 0.5 + 0.5;
+
+    // check if fragment is in projector's frustum and facing projector
+    float3 projDir = normalize(projectorPos - IN.worldPos);
+    float facing = dot(N, projDir);
+
+    float3 finalColor;
+    if (tc.x >= 0.0 && tc.x <= 1.0 && tc.y >= 0.0 && tc.y <= 1.0 &&
+        tc.z > 0.0 && facing > 0.0) {
+        float3 texColor = tex2D(projTexture, tc.xy).rgb;
+        finalColor = lerp(IN.color.rgb, texColor, 0.7);
+        float diff = max(dot(N, projDir), 0.0);
+        finalColor = finalColor * (ka + (1.0 - ka) * diff);
+    } else {
+        finalColor = IN.color.rgb * ka;
+    }
+
+    return float4(finalColor, 1.0);
+}

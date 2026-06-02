@@ -1,0 +1,59 @@
+// Shadow mapping shader - Cg version
+// Equivalent to shaders/shadow.vert + shadow.frag
+
+struct VertexInput {
+    float4 position : POSITION;
+    float4 color    : COLOR;
+    float3 normal   : NORMAL;
+};
+
+struct VertexOutput {
+    float4 hPosition   : POSITION;
+    float4 color       : COLOR;
+    float3 normal      : TEXCOORD0;
+    float3 worldPos    : TEXCOORD1;
+    float4 shadowCoord : TEXCOORD2;
+};
+
+VertexOutput VertexMain(VertexInput IN,
+    uniform float4x4 modelViewProj,
+    uniform float4x4 lightMVP)
+{
+    VertexOutput OUT;
+    OUT.hPosition = mul(modelViewProj, IN.position);
+    OUT.color = IN.color;
+    OUT.normal = IN.normal;
+    OUT.worldPos = IN.position.xyz;
+    OUT.shadowCoord = mul(lightMVP, IN.position);
+    return OUT;
+}
+
+float4 FragmentMain(VertexOutput IN,
+    uniform sampler2D shadowMap : TEXUNIT0,
+    uniform float3 lightPos,
+    uniform float ka) : COLOR
+{
+    // shadow map lookup via perspective divide -> [0,1]
+    float3 sc = IN.shadowCoord.xyz / IN.shadowCoord.w;
+    sc = sc * 0.5 + 0.5;
+
+    // shadow test with slope-scaled bias
+    float3 N = normalize(IN.normal);
+    float3 L = normalize(lightPos - IN.worldPos);
+    float cosTheta = clamp(dot(N, L), 0.05, 1.0);
+    float bias = 0.005 / cosTheta;
+    if (bias > 0.02) bias = 0.02;
+
+    float shadow = 1.0;
+    if (sc.x >= 0.0 && sc.x <= 1.0 && sc.y >= 0.0 && sc.y <= 1.0) {
+        float closestDepth = tex2D(shadowMap, sc.xy).r;
+        if (sc.z - bias > closestDepth)
+            shadow = 0.0;
+    }
+
+    // diffuse lighting
+    float diff = max(dot(N, L), 0.0);
+    float3 lit = IN.color.rgb * (ka + (1.0 - ka) * diff * shadow);
+
+    return float4(lit, 1.0);
+}
